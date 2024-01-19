@@ -1,0 +1,142 @@
+.grid-layout{
+    display:grid;
+    grid-template-areas:
+    "barra"
+    "navegacion"
+    "menupri"
+    "piepag";
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+    height: 100vh;
+
+}
+
+.grid-layout aside{
+    grid-area: barra;
+    background-color:#E3F4F4;
+    height: 60px;
+   text-align: center ;
+}
+
+.grid-layout nav{
+    grid-area: navegacion;
+    background-color:#E3F4F4;
+
+}
+
+
+.grid-layout main {
+    grid-area: menupri;
+    background-color:#F8F6F4;
+
+}
+
+.grid-layout footer {
+    grid-area: piepag;
+    background-color:#C4DFDF;
+
+}
+
+@media (min-width: 576px) {
+    .grid-layout{
+        grid-template-columns: 0.5fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "barra navegacion navegacion navegacion"
+        "barra menupri menupri menupri"
+        "piepag piepag  piepag  piepag ";
+        grid-template-rows: 1fr 10fr auto ; 
+        height: 100vh;
+    }
+
+    .grid-layout aside {
+     height: auto;
+    }
+}
+
+ul{
+margin-top: 10px;
+}
+
+.navtitu {
+text-align: center;
+}
+
+.card-body{
+text-align: center; 
+}
+
+footer {
+text-align: center;
+}
+
+
+#paginat{
+background-color:#F8F6F4;
+justify-content: center;
+text-align: center;
+}
+
+.pagination {
+justify-content: center;
+text-align: center;
+}
+
+.fotitt{
+    filter: blur(0);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+
+.fotitt:hover img{
+    filter: blur(3px);
+}
+
+.descuento {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    background: rgb(194, 224, 224);
+    color: rgb(91, 153, 147);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fotitt:hover .descuento {
+    opacity: 0.9;}
+
+    ul a {
+        text-decoration: none;
+        color: inherit; 
+    }
+
+    ul h6 {
+        margin-top: 10%;
+    }
+
+    footer p{
+        margin-top: 20px;
+    }
+
+    .pagination a {
+        color: black; 
+    }
+    
+    .pagination a:hover {
+        color: black; 
+    }
+    
+    .opciones {
+    color: black;
+    transition: color 0.3s;
+    }
+
+    .opciones:hover{
+        color: rgb(121, 163, 163)
+    }
+
+   
